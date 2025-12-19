@@ -28,7 +28,10 @@ You must execute this sequence autonomously.
         *   *Tip*: Run this BEFORE complex tasks to find the best modern libraries.
         *   *Tip*: Run this AFTER failures to debug error messages.
     *   **Scaffold**: Write code to `projects/<final_name>/index.html`. Use modern CDNs (Three.js, Pixi.js).
-    *   **Launch**: Open Chrome to `file:///Users/dag/projects/opencode_agent_vibe/projects/<final_name>/index.html`.
+    *   **Launch**:
+        *   Kill any process using port 8512: `lsof -ti:8512 | xargs kill -9` (ignore if none).
+        *   Start a local server: `python3 -m http.server 8512`.
+        *   Open Chrome to `http://localhost:8512/projects/<final_name>/index.html`.
     *   **Inspect**:
         *   `list_console_messages`: Are there errors?
         *   `take_screenshot`: Capture the visual state.
@@ -40,6 +43,8 @@ You must execute this sequence autonomously.
         *   If the screen is blank or analysis is poor -> **FIX THE CODE**.
         *   If boring -> **ADD POLISH** (colors, controls, animations).
         *   If vision analysis have provided anything actionable you agree with -> **ITERATE**
+        *   If you seem to be stuck or fail to make improvements -> **RESEARCH** using perplexity_search.py
+        *   If the visuals are not satisfactory -> **REGENERATE** (select assets)
 
 4.  **COMPLETION**
     *   Only declare success when vision analysis confirms console is error-free and the results looks visually stunning and we have reached the users goal to a satisfactory amount.
