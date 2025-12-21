@@ -6,6 +6,8 @@ CORE GAMEPLAY:
 - Hold spacebar for a speed boost
 - Objective: collect food items while avoiding enemies
 - No combat mechanics - survival through movement only
+- When player collects food, the player body grows in a style similar to the snake in the classic Snake game
+- The growing body should be uniform and look like made using Boolean union operation
 
 WORLD:
 - Procedurally generated environment
@@ -16,7 +18,6 @@ COLLECTIBLES & HAZARDS:
 - Enemy entities that patrol or move (must be avoided)
 
 UI ELEMENTS:
-
 - Display player's current world coordinates (x, y) in the top-left corner
 - Coordinates should update in real-time as player moves
 
@@ -24,5 +25,6 @@ VISUAL STYLE:
 - 2D sprites for player, enemies, and food
 - Top-down perspective
 - Clear visual distinction between player, enemies, and collectibles
+- Procedurally generated background
 
 Build this as a single playable application with smooth controls and clear win/lose conditions.
